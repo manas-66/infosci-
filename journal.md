@@ -51,6 +51,6 @@ def mouseClicked():
     print (x,y)
     
     
-  ## homework secind class
+  ## homework second class
   1. add lines from the middle of the window to each circle
   2. add lines from circle to circle
