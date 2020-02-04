@@ -10,6 +10,7 @@ we make a command for the robot to make him make a jelly sandwitch
 3. question i have
 
 Today we worked on processing,
+
 x = 0
 
 def setup():
