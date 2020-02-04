@@ -22,11 +22,9 @@ def setup():
     textAlign(CENTER, CENTER)
 
 def draw():
-
     print("")
     
 def mouseClicked():
-
     x = mouseX
     
     y = mouseY
@@ -51,3 +49,8 @@ def mouseClicked():
     text("mana",x,y)
     
     print (x,y)
+    
+    
+  ## homework secind class
+  1. add lines from the middle of the window to each circle
+  2. add lines from circle to circle
