@@ -1,0 +1,93 @@
+rolls = 0
+one = 0
+two = 0
+three = 0
+four = 0
+five = 0
+six = 0
+def setup(): 
+    size(850,600)
+    background(255)
+    strokeWeight(10)
+    
+    
+def draw():
+    global rolls, one, two, three, four, five, six
+    background(255)
+    strokeWeight(10)
+    n = random(0,6)
+    stroke(0)
+    fill(255);
+    rect(100, 100, 400, 400, 50)
+    stroke(255, 0, 0) #red green, blue
+    
+    if 0<=n<1:
+        # number one 
+        circle (300, 300, 50)
+        one -= 1
+    if 1<=n<2:
+        # number two
+        circle (200, 200, 50) # top left
+        circle (400, 400, 50)
+        two -= 1
+    if 2<=n<3:
+        # number three
+        circle (300, 300, 50)
+        circle (200, 200, 50) # top left
+        circle (400, 400, 50)
+        three -= 1
+    if 3<=n<4:
+        # number four
+        circle (200, 400, 50)
+        circle (200, 200, 50) # top left
+        circle (400, 400, 50)
+        circle (400, 200, 50)
+        four -= 1
+    if 4<=n<5:
+        # number five
+        circle (200, 400, 50)
+        circle (200, 200, 50) # top left
+        circle (400, 400, 50)
+        circle (400, 200, 50)
+        circle (300, 300, 50)
+        five -= 1
+    if 5<=n<6:
+    # number six
+        circle (200, 400, 50)
+        circle (200, 200, 50) # top left 
+        circle (400, 400, 50)
+        circle (400, 200, 50) 
+        circle (200, 300, 50)
+        circle (400, 300, 50)
+        six -= 1
+    rolls += 1
+    textSize(20)
+    fill(0)
+    strokeWeight(2)
+    stroke(0, 255, 0)
+    rect(550, 500, 10, one)
+    
+    text('1' ,550, 550)
+    stroke(255, 0, 0)
+    rect(600, 500, 10, two)
+    text('2' ,600, 550)
+    stroke(0, 0, 255)
+    rect(650, 500, 10, three)
+    text('3', 650, 550)
+    stroke(255, 255, 0)
+    rect(700, 500, 10, four)
+    text('4', 700, 550)
+    stroke(0, 255, 255)
+    rect(750, 500, 10, five)
+    text('5', 750, 550)
+    stroke(255, 0, 255)
+    rect(800, 500, 10, six)
+    text('6', 800, 550)
+    fill(0)
+    textSize(20)
+    text("Rolls: ", 400, 550)
+    text(rolls, 460, 550)
+    fill(255)
+    delay (0)
+    textSize(10)
+    fill(0);
