@@ -1,0 +1,86 @@
+Questions: 
+What are some ways in which Computer Science can help fight against COVID-19? 
+
+In the article, Bowman and the scientists have created a software which enables them to 
+essentially borrow computer power from others. This is defined as a computer science, and without
+this technology they would not have been able to study COVID’s spike proteins since the 
+simulations would take up so much computer power. Computer Science has also helped the fight 
+against COVID-19 using the skill to create the simulations in real life. 
+
+In your opinion, should people enable access to the resources of their personal computers as tools 
+for research? Are there any risks?
+
+As I started using my personal computer a lot since I came to ISAK, I realized the benefit of doing the research 
+using a personal computer. However, at the same time, I sometimes forget the risk that my persnal date might be sold 
+without realzing. So, I would like to distribute my computer power in order to help fight against the COVID-19, but 
+on the other hand, I also think I have a right to know how the power is being used. 
+
+task #1
+# definition of variables
+posx = 300
+posy = 300
+
+def setup():
+    size(500,500)
+    
+def draw(): 
+     global posx, posy
+     background(255)
+     strokeWeight(2)
+     
+     #create individual
+     circle(posx, posy, 40)
+     posx = posx + random(-10, 10)
+     posy = posy + random(-10, 10)
+     1
+     # bounderies conditions
+     if posx > 480:
+         posx = 480
+     
+     if posy > 480:
+         posy = 480
+         
+     if posx < 20:
+        posx = 20
+        
+     if posy < 20:
+        posy = 20
+        
+         delay(100)
+         
+         
+  
+task #2
+x = [40, 60, 100, 140, 180, 220, 260, 300, 340, 380]
+y = [40, 60, 100, 140, 180, 220, 260, 300, 340, 380]
+
+def setup():
+    size(500, 500)
+    
+def draw(): 
+     global x, y
+     background(255)
+     strokeWeight(2)
+     
+     #create 1st individual
+     for i in range(10): 
+        circle(x[i], y[i], 40)
+        x[i] = x[i] + random(-10, 10)
+        y[i] = y[i] + random(-10, 10)
+     
+     
+     # bounderies conditions
+     if x[i] > 480:
+         x[i] = 480
+               
+     if y[i] > 480:
+         y[i] = 480
+         
+         
+     if x[i] < 20:
+         x[i] = 20
+
+     if y[i] < 20:
+         y[i] = 20
+         
+     delay(100)
