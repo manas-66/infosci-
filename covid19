@@ -1,0 +1,58 @@
+# varible definition
+x = [100, 200]
+y = [100, 250]
+h = [False, True]
+# False=>infected
+
+def setup():
+    size(500, 500)
+    for n in range(20):
+        x.append(random(0, 500))
+        y.append(random(0, 500))
+        h.append(True) #all healthy
+    
+def distance(x1, x2, y1, y2):
+    a = (x1 - x2)
+    b = (y1 - y2)
+    c = sqrt(a**2 + b**2)
+    return c
+    
+def draw():
+    global x, y
+    background(225)
+    
+    #show the individuals
+    for ind in range (len(x)):
+        if h[ind] == True:
+            fill(255) #healthy
+        else:
+            fill(255, 0, 0) #infected
+        
+        circle (x[ind], y[ind], 40)
+        #calculating the distance to neighbor
+        for neig in range (len(x)):
+            if neig == ind:
+                continue
+            d = distance (x[ind], x[neig], y[ind], y[neig])
+            if d < 40 and (h[neig] == False or h[ind] == False):
+                # infection happens
+                h[ind] = False
+                h[neig] = False
+                
+    # move the individuals
+    for m in range(3):
+        # move randomly
+        x[m] += random(-10, 10)
+        y[m] += random(-10, 10)
+        #boundary conditions
+        if x[m] > 500: 
+            x[m] = 500 #right
+        if y[m] > 500:
+            y[m] = 500 #bottom
+        if x[m] < 0:
+            x[m] = 0 #left
+        if y[m] < 0:
+            y[m] = 0 #stop
+           
+           
+           
